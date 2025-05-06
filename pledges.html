@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5대 공약 상세 | 기호 3번 김정현</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // 탭 전환
+    function openTab(evt, id) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+      document.querySelectorAll('.tab-btn')
+        .forEach(b => b.classList.remove('border-b-4','border-yellow-400','font-bold'));
+      evt.currentTarget.classList.add('border-b-4','border-yellow-400','font-bold');
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-yellow-400 py-12 text-center">
+    <h1 class="text-4xl font-extrabold">김정현 후보 5대 공약 상세</h1>
+    <a href="index.html" class="mt-4 inline-block text-black underline">← 메인으로 돌아가기</a>
+  </header>
+
+  <main class="container mx-auto px-6 py-16">
+    <!-- 탭 버튼 -->
+    <div class="flex justify-center space-x-4 mb-10">
+      <button class="tab-btn border-b-4 border-yellow-400 font-bold pb-2" onclick="openTab(event,'p1')">1. 투명·공정</button>
+      <button class="tab-btn pb-2" onclick="openTab(event,'p2')">2. 소통·신뢰</button>
+      <button class="tab-btn pb-2" onclick="openTab(event,'p3')">3. 신공법</button>
+      <button class="tab-btn pb-2" onclick="openTab(event,'p4')">4. 갈등 봉합</button>
+      <button class="tab-btn pb-2" onclick="openTab(event,'p5')">5. 명품 단지</button>
+    </div>
+
+    <!-- 1 -->
+    <section id="p1" class="tab">
+      <h2 class="text-2xl font-bold mb-4">1. 투명·공정한 운영</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><b>실시간 회계 대시보드</b> – 지출·수입·예산 잔액을 그래프로 한눈에.</li>
+        <li><b>공개 오디션제</b> – 협력업체 PT 현장을 온라인 생중계, 조합원 실시간 투표.</li>
+        <li>모든 계약서 PDF → 홈페이지 24시간 내 업로드.</li>
+        <li>분기별 감사보고·질의응답 라이브 세션.</li>
+      </ul>
+    </section>
+
+    <!-- 2 -->
+    <section id="p2" class="tab hidden">
+      <h2 class="text-2xl font-bold mb-4">2. 소통·신뢰 강화</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><b>모바일 앱</b> 출시 – 공지 푸시알림 + 전자 투표.</li>
+        <li>Q&A 게시판 24h 답변, 미이행 시 공개 사과.</li>
+        <li>월 1회 온·오프 ‘타운홀 미팅’ 정례화.</li>
+        <li>주요 도면·예산 변경 → 전자 토론 후 의결.</li>
+      </ul>
+    </section>
+
+    <!-- 3 -->
+    <section id="p3" class="tab hidden">
+      <h2 class="text-2xl font-bold mb-4">3. 신공법 도입·지속 가능한 설계</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>ZEB(Zero Energy Building) 등급 획득 도전.</li>
+        <li>지능형 단열재·BIPV 태양광 패널 → 관리비 30% 절감.</li>
+        <li>전 세대 HEPA 공기케어 + 자동 환기 시스템.</li>
+        <li>녹색 기금·정부 보조금 활용 → 추가 분담금 ZERO.</li>
+      </ul>
+    </section>
+
+    <!-- 4 -->
+    <section id="p4" class="tab hidden">
+      <h2 class="text-2xl font-bold mb-4">4. 갈등 봉합·조직 통합</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>분쟁 중재 전문 로펌 자문 → 합리적 중재안 도출.</li>
+        <li>세대별 ‘소통 리더’ 선발 → 현장 의견 즉시 수렴.</li>
+        <li>갈등 이슈 타임라인 공개 + 해결 로드맵 투표.</li>
+        <li>조합원 화합 행사(체육대회·플리마켓) 연 2회.</li>
+      </ul>
+    </section>
+
+    <!-- 5 -->
+    <section id="p5" class="tab hidden">
+      <h2 class="text-2xl font-bold mb-4">5. 명품 단지 조성·가치 극대화</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>호텔식 피트니스·사우나·게스트하우스 설계.</li>
+        <li>AI 스마트홈 패키지 무료 업그레이드.</li>
+        <li>유럽 감성 외관 + 야간 경관 조명.</li>
+        <li>분양 전문 컨설팅 선투입 → 분양가 프리미엄 극대화.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="py-6 bg-black text-white text-center">
+    <p>© 2025 기호 3번 김정현 선거사무소. 모든 권리 보유.</p>
+  </footer>
+</body>
+</html>
