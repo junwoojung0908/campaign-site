@@ -4,160 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>기호 3번 김정현 조합장 후보</title>
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // 간단한 탭 전환 스크립트
-    function openTab(evt, tabName) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(t => t.classList.add('hidden'));
-      document.getElementById(tabName).classList.remove('hidden');
-
-      const btns = document.querySelectorAll('.tab-btn');
-      btns.forEach(b => b.classList.remove('border-b-4', 'border-yellow-400', 'font-bold'));
-      evt.currentTarget.classList.add('border-b-4', 'border-yellow-400', 'font-bold');
-    }
-  </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <!-- Hero Section -->
-  <header class="relative bg-cover bg-center" style="background-image: url('https://source.unsplash.com/featured/?apartment');">
+
+  <!-- Hero -->
+  <header class="relative bg-cover bg-center" style="background-image:url('https://source.unsplash.com/featured/?apartment');">
     <div class="backdrop-brightness-50 h-full w-full py-24 flex items-center justify-center">
       <div class="text-center text-white px-4">
         <h1 class="text-4xl md:text-6xl font-extrabold drop-shadow-lg">판을 바로잡고, 가치를 두 배로!</h1>
         <p class="mt-4 text-xl md:text-2xl">기호 3번 김정현 · A2 구역 조합장 후보</p>
-        <a href="#pledges" class="mt-8 inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-3 px-8 rounded-full shadow-lg transition">핵심 공약 보기</a>
+        <!-- 새 페이지로 이동 -->
+        <a href="pledges.html"
+           class="mt-8 inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-3 px-8 rounded-full shadow-lg transition">
+          5대 공약 자세히 보기
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="py-16 container mx-auto px-6">
     <div class="flex flex-col md:flex-row items-center gap-10">
       <img src="photo.jpeg" alt="김정현 후보 사진" class="w-64 h-64 object-cover rounded-2xl shadow-lg" />
       <div class="max-w-2xl">
         <h2 class="text-3xl font-bold mb-4">왜 김정현인가?</h2>
-        <p class="leading-relaxed mb-4">조합원 여러분의 자산 가치를 극대화하고, 투명하고 신속한 조합 운영을 실현할 준비가 된 후보입니다. 불투명한 회계, 지연된 사업, 끝없는 갈등—이제는 끝내야 합니다. 김정현이 조합의 새로운 미래를 열겠습니다.</p>
+        <p class="leading-relaxed mb-4">
+          조합원 여러분의 자산 가치를 극대화하고, 투명하고 신속한 조합 운영을 실현할 준비가 된 후보입니다.
+          불투명한 회계, 지연된 사업, 끝없는 갈등—이제는 끝내야 합니다.
+          김정현이 조합의 새로운 미래를 열겠습니다.
+        </p>
         <p class="font-semibold">“내 집값, 내가 지킨다!”</p>
       </div>
     </div>
   </section>
 
-  <!-- Pledges Section -->
+  <!-- 5대 핵심 공약 요약 -->
   <section id="pledges" class="py-16 bg-white">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-12">5대 핵심 공약</h2>
       <div class="grid md:grid-cols-2 gap-8">
+        <!-- 1 -->
         <div class="bg-gray-100 p-8 rounded-2xl shadow-md">
           <h3 class="text-xl font-bold mb-2">1. 투명·공정한 운영</h3>
-          <ul class="list-disc list-inside space-y-1">
-            <li>협력업체 선정 기준 및 계약 내역 100% 공개</li>
-            <li>사업비·운영비 절감으로 부담 최소화</li>
-          </ul>
+          <p>협력업체 선정 기준∙계약 내역 100% 공개, 사업비·운영비 절감</p>
         </div>
+        <!-- 2 -->
         <div class="bg-gray-100 p-8 rounded-2xl shadow-md">
           <h3 class="text-xl font-bold mb-2">2. 소통·신뢰 강화</h3>
-          <ul class="list-disc list-inside space-y-1">
-            <li>홈페이지·모바일 채널 실시간 정보 제공</li>
-            <li>24시간 문의 응대·48시간 자료 공개</li>
-          </ul>
+          <p>홈페이지·모바일 채널 실시간 정보 제공, 24h 문의 응대</p>
         </div>
+        <!-- 3 -->
         <div class="bg-gray-100 p-8 rounded-2xl shadow-md">
-          <h3 class="text-xl font-bold mb-2">3. 신공법 도입·지속 가능한 설계</h3>
-          <ul class="list-disc list-inside space-y-1">
-            <li>친환경·에너지 고효율 신공법 채택</li>
-            <li>유지비 감소, 미래 가치 상승</li>
-          </ul>
+          <h3 class="text-xl font-bold mb-2">3. 신공법·지속 가능 설계</h3>
+          <p>친환경·에너지 고효율 신공법, 유지비↓ 가치↑</p>
         </div>
+        <!-- 4 -->
         <div class="bg-gray-100 p-8 rounded-2xl shadow-md">
           <h3 class="text-xl font-bold mb-2">4. 갈등 봉합·조직 통합</h3>
-          <ul class="list-disc list-inside space-y-1">
-            <li>원팀 선언으로 분열 해소</li>
-            <li>사업 시행인가 문제점 보완</li>
-          </ul>
+          <p>원팀 선언, 분쟁 중재·로드맵 공개</p>
         </div>
+        <!-- 5 -->
         <div class="bg-gray-100 p-8 rounded-2xl shadow-md md:col-span-2">
-          <h3 class="text-xl font-bold mb-2">5. 명품 단지 조성·가치 극대화</h3>
-          <ul class="list-disc list-inside space-y-1">
-            <li>호텔급 커뮤니티·트렌디한 외관·스마트홈</li>
-            <li>지역 대표 랜드마크로 자리매김</li>
-          </ul>
+          <h3 class="text-xl font-bold mb-2">5. 명품 단지·가치 극대화</h3>
+          <p>호텔급 커뮤니티·스마트홈, 지역 대표 랜드마크 조성</p>
         </div>
       </div>
-      <div class="text-center mt-12">
-        <a href="#details" class="inline-block bg-black text-white font-semibold py-3 px-10 rounded-full shadow-lg hover:bg-gray-800 transition">5대 공약 자세히 보기</a>
-      </div>
     </div>
   </section>
 
-  <!-- Detailed Pledges Section -->
-  <section id="details" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8">5대 공약 세부 내용</h2>
-      <!-- Tab Buttons -->
-      <div class="flex justify-center space-x-4 mb-8">
-        <button class="tab-btn border-b-4 border-yellow-400 font-bold pb-2" onclick="openTab(event,'tab1')">1. 투명·공정</button>
-        <button class="tab-btn pb-2" onclick="openTab(event,'tab2')">2. 소통·신뢰</button>
-        <button class="tab-btn pb-2" onclick="openTab(event,'tab3')">3. 신공법</button>
-        <button class="tab-btn pb-2" onclick="openTab(event,'tab4')">4. 갈등 봉합</button>
-        <button class="tab-btn pb-2" onclick="openTab(event,'tab5')">5. 명품 단지</button>
-      </div>
-
-      <!-- Tab Contents -->
-      <div id="tab1" class="tab-content">
-        <h3 class="text-2xl font-bold mb-4">1. 투명·공정한 운영</h3>
-        <ul class="list-disc list-inside space-y-2">
-          <li><strong>실시간 회계 대시보드</strong> 구축: 지출·수입 내역을 그래프로 한눈에.</li>
-          <li><strong>공개 오디션제</strong>로 협력업체 선정: PT 현장도 온라인 생중계.</li>
-          <li>모든 계약서 PDF 파일 → 홈페이지 24시간 이내 업로드.</li>
-          <li>감사보고서 분기별 발행 + 조합원 질의응답 라이브 세션.</li>
-        </ul>
-      </div>
-      <div id="tab2" class="tab-content hidden">
-        <h3 class="text-2xl font-bold mb-4">2. 소통·신뢰 강화</h3>
-        <ul class="list-disc list-inside space-y-2">
-          <li><strong>모바일 앱</strong> 출시: 공지 푸시알림 + 전자 투표.</li>
-          <li>Q&A 게시판 → 24시간 내 답변 보장, 미이행 시 공개 사과.</li>
-          <li>월 1회 온·오프 ‘타운홀 미팅’ 정례화.</li>
-          <li>주요 도면·예산 변경 → 조합원 전자 토론 후 의결.</li>
-        </ul>
-      </div>
-      <div id="tab3" class="tab-content hidden">
-        <h3 class="text-2xl font-bold mb-4">3. 신공법 도입·지속 가능한 설계</h3>
-        <ul class="list-disc list-inside space-y-2">
-          <li>국내 최초 <span class="font-semibold">ZEB (Zero Energy Building) 등급</span> 획득 도전.</li>
-          <li>지능형 단열재·태양광 BIPV 패널 적용 → 관리비 최대 30% 절감.</li>
-          <li>실내 공기케어 시스템 (HEPA + 자동 환기) 전세대 기본 적용.</li>
-          <li>녹색 기금 및 정부 보조금 활용 → 조합원 추가 분담 ZERO.</li>
-        </ul>
-      </div>
-      <div id="tab4" class="tab-content hidden">
-        <h3 class="text-2xl font-bold mb-4">4. 갈등 봉합·조직 통합</h3>
-        <ul class="list-disc list-inside space-y-2">
-          <li>분쟁 중재 전문 로펌 자문 계약 → 합리적 중재안 도출.</li>
-          <li>세대별 ‘소통 리더’ 선발 → 현장 의견 즉시 수렴.</li>
-          <li>갈등 이슈 타임라인 공개 + 해결 로드맵 투표.</li>
-          <li>조합원 화합 행사 (체육대회·플리마켓) 연 2회 개최.</li>
-        </ul>
-      </div>
-      <div id="tab5" class="tab-content hidden">
-        <h3 class="text-2xl font-bold mb-4">5. 명품 단지 조성·가치 극대화</h3>
-        <ul class="list-disc list-inside space-y-2">
-          <li>호텔식 피트니스·사우나·게스트하우스 설계.</li>
-          <li>AI 스마트홈 패키지 (음성 제어·원격 모니터링) 무료 업그레이드.</li>
-          <li>유럽 감성 외관 디자인 + 야간 경관 조명 설치.</li>
-          <li>분양 전문 컨설팅 사전 투입 → 분양가 프리미엄 극대화.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
+  <!-- CTA -->
   <section class="py-16 bg-yellow-400">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-extrabold mb-4">지금, 기호 3번 김정현을 선택하세요!</h2>
       <p class="mb-8 text-lg md:text-xl">투명성·신속성·혁신 설계로 우리 아파트의 가치를 두 배로 올리겠습니다.</p>
-      <a href="#pledges" class="inline-block bg-black text-white font-semibold py-3 px-10 rounded-full shadow-lg hover:bg-gray-800 transition">공약 다시 보기</a>
+      <a href="pledges.html"
+         class="inline-block bg-black text-white font-semibold py-3 px-10 rounded-full shadow-lg hover:bg-gray-800 transition">
+        5대 공약 자세히 보기
+      </a>
     </div>
   </section>
 
