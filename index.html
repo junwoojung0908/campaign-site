@@ -42,11 +42,11 @@
         <!-- Audio File -->
         <audio id="speechAudio" controls class="w-full mb-6">
           <source src="speech.m4a" type="audio/mp4" />
-          <track id="captions" kind="subtitles" src="speech.vtt" srclang="ko" default />
+          <track kind="subtitles" src="speech.vtt" srclang="ko" default>
           브라우저가 오디오 태그를 지원하지 않습니다.
         </audio>
 
-        <!-- Highlighted Script will be injected here -->
+        <!-- Statement (will highlight) -->
         <div id="script" class="space-y-2 leading-relaxed"></div>
       </div>
     </div>
@@ -68,7 +68,7 @@
         </div>
         <!-- 공약 2 -->
         <div class="bg-gray-100 p-8 rounded-2xl shadow-md">
-          <h3 class="text-2xl font-extrabold mb-4">2. 신공법 타당성 조사</h3>
+          <h3 class="text-xl mb-4 font-semibold">2. 신공법 <span class="text-2xl md:text-3xl font-extrabold text-yellow-500">타당성</span> 조사</h3>
           <ul class="list-disc pl-4 space-y-1 text-sm leading-relaxed">
             <li>암석 발포 작업 최소화로 공사 기간 단축</li>
             <li>4-베이 설계로 힐스테이트 대비 넓은 공간</li>
@@ -77,7 +77,7 @@
         </div>
         <!-- 공약 3 -->
         <div class="bg-gray-100 p-8 rounded-2xl shadow-md">
-          <h3 class="text-xl font-bold mb-4">3. 하이엔드(럭셔리) 아파트 구현</h3>
+          <h3 class="text-xl font-bold mb-4">3. 하이엔드 아파트 구현</h3>
           <ul class="list-disc pl-4 space-y-1 text-sm leading-relaxed">
             <li>차원이 다른 디자인·커뮤니티·서비스로 하이엔드 가치 실현</li>
             <li>힐스테이트 대비 고급화된 내부 마감재</li>
@@ -105,30 +105,30 @@
     <p>© 2025 기호 3번 김정현 선거사무소. 모든 권리 보유.</p>
   </footer>
 
-  <!-- Karaoke-style Highlight Script -->
+  <!-- Karaoke‑style highlight script -->
   <script>
     const audio   = document.getElementById('speechAudio');
     const track   = audio.textTracks[0];
     track.mode    = 'hidden';
     const script  = document.getElementById('script');
-    const lines   = [];
+    let   lines   = [];
 
+    // Build script once cues are ready
     function buildScript() {
-      for (const cue of track.cues) {
+      if (!track || !track.cues || !track.cues.length) return;
+      lines = Array.from(track.cues).map(cue => {
         const p = document.createElement('p');
         p.textContent = cue.text;
-        p.dataset.index = cue.id = lines.length;
         script.appendChild(p);
-        lines.push(p);
-      }
+        return p;
+      });
     }
 
-    if (track.cues && track.cues.length) {
+    audio.addEventListener('loadeddata', () => {
       buildScript();
-    } else {
-      track.addEventListener('load', buildScript, { once: true });
-    }
+    });
 
+    // Highlight on cuechange
     track.addEventListener('cuechange', () => {
       const active = track.activeCues;
       lines.forEach(el => el.classList.remove('text-yellow-400', 'font-bold'));
